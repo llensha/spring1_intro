@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Spring MVC GeekApp</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div class="container">
+    <br>
+    <h2>Добавить продукт:</h2>
+    <form th:action="@{'/products/addProduct'}" method="post">
+        <table>
+            <tbody>
+            <tr>
+                <td><label>Артикул</label></td>
+                <td><input type="number" min="0" name="id"></td>
+            </tr>
+            <tr>
+                <td><label>Наименование</label></td>
+                <td><input type="text" name="title"></td>
+            </tr>
+            <tr>
+                <td><label>Цена</label></td>
+                <td><input type="number" step="0.01" min="0" name="cost"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button class="btn btn-primary" type="submit">Добавить</button></td>
+            </tr>
+            </tbody>
+        </table>
+    </form>
+    <br>
+    <a th:href="@{/products/all}">Список продуктов</a>
+</div>
+</body>
+</html>
