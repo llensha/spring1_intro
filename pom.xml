@@ -6,6 +6,7 @@
 
     <modules>
         <module>eureka-client-back</module>
+        <module>eureka-client-front</module>
         <module>eureka-client-front-thymeleaf</module>
         <module>eureka-server</module>
         <module>zuul-server</module>

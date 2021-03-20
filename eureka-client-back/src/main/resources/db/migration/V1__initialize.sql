@@ -1,12 +1,12 @@
 CREATE TABLE products (
     id              BIGSERIAL PRIMARY KEY,
     title           VARCHAR(255) NOT NULL,
-    cost            DECIMAL NOT NULL,
+    price           INTEGER NOT NULL,
     created_at      TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at      TIMESTAMP DEFAULT CURRENT_TIMESTAMP
                       );
 
-INSERT INTO products (title, cost) VALUES
+INSERT INTO products (title, price) VALUES
 ('Авокадо', 70),
 ('Хлеб', 1),
 ('Лосось', 50),

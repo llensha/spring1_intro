@@ -16,5 +16,6 @@ eureka:
 zuul:
   routes:
     eureka-client-back: /back/**
+    eureka-client-front: /front/js/**
     eureka-client-front-thymeleaf: /front/thymeleaf/**
   sensitiveHeaders: Cookie, Set-Cookie

@@ -1,0 +1,48 @@
+<!doctype html>
+
+<html ng-app="market">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <script src="index.js"></script>
+</head>
+
+<body>
+
+<div class="container" ng-controller="indexController" style="min-height: 100vh; display: flex; flex-direction: column;">
+    <div class="top" style="flex-grow: 1">
+        <header style="min-height: 100px; display: flex; justify-content: space-between; align-items: center; background-color: cornflowerblue; text-decoration-color: white; color: white">
+            <h1 style="margin-left: 25px">My Market</h1>
+        </header>
+
+        <h3>Список товаров</h3>
+        <table class="table table-hover table-sm" cellpadding="0" cellspacing="0">
+            <thead class="table-primary">
+            <tr class="d-flex">
+                <th class="col-5">Название</th>
+                <th class="col-2">Цена</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="d-flex" ng-repeat="product in productsList" style="height: 40px">
+                <td class="col-5">{{product.title}}</td>
+                <td class="col-2">{{product.price}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer style="min-height: 50px; display: flex; align-items: center; margin-top: 15px; padding: 15px; background-color: cadetblue; color: white">
+        <div style="display: flex; flex: auto; justify-content: space-between; opacity: 0.4;">
+            <label style="margin-bottom: 0px">2021 © GeekBrains</label>
+        </div>
+    </footer>
+
+</div>
+</body>
+</html>
